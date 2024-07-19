@@ -18,8 +18,12 @@ docker compose up -d
 # 進捗確認
 docker compose logs
 
-# 下記を実行して実行中コンテナがなくなったら完了
+# コンテナの状況確認
 docker compose ps
+
+# 実行中コンテナのステータスがRestartingになったら初期化終了
+# 一旦コンテナを停止させる
+docker compose down -v
 ```
 
 ### 2. ゲーム設定ファイルの変更
