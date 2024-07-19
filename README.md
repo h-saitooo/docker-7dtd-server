@@ -9,10 +9,17 @@ Linux GSM: https://docs.linuxgsm.com/
 ## 使い方
 
 ### 1. ゲームのインストール
+
 ```bash
 git clone https://github.com/h-saitooo/docker-7dtd-server.git
 cd docker-7dtd-server
-docker-compose up -d
+docker compose up -d
+
+# 進捗確認
+docker compose logs
+
+# 下記を実行して実行中コンテナがなくなったら完了
+docker compose ps
 ```
 
 ### 2. ゲーム設定ファイルの変更
@@ -26,7 +33,10 @@ docker-compose up -d
 vim volumes/ServerFiles/sdtdserver.xml
 ```
 
-serverconfig.xml: https://7daystodie.fandom.com/wiki/Server:_serverconfig.xml
+参考
+
+[serverconfig.xml](https://7daystodie.fandom.com/wiki/Server:_serverconfig.xml)
+[7DTDサーバ特有のセキュリティ対策](https://higashi-kyoto.tokyo/?page_id=573)
 
 ### 3. サーバーの起動
 
